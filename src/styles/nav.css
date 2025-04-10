@@ -1,0 +1,71 @@
+#menu {
+  width: 30vh;
+  height: 100vh;
+  background-color: #157347;
+  color: white;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+#menu a {
+  display: block;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background-color: #0b5734;
+}
+
+/* Botón para mostrar el menú */
+#botonMostrar {
+    width: 7vh;
+  display: none;
+  margin: 0px 0px 20px 0px;
+  padding: 10px 15px;
+  font-size: 16px;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+#botonMostrar {
+  display: none;
+  top: 10px;
+  left: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: #157347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+#botonMostrar:hover {
+  background-color: #0b5734;
+}
+
+#botonCerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+  
+/* Contenido de la página desplazado para no chocar con el menú */
+.contenido {
+  margin-left: 220px;
+  padding: 20px;
+}

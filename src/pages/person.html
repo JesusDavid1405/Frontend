@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="menu" class="col-4">
+                <a href="#">Inicio</a>
+                <a href="#">Person</a>
+                <a href="#">User</a>
+                <a href="#">Rol</a>
+                <a href="#">RolUser</a>
+                <a href="#">Form</a>
+                <button id="botonCerrar" onclick="cerrarMenu()">❌</button>
+            </div>
+
+            <div class="col-12">
+                <button id="botonMostrar" onclick="mostrarMenu()">Mostrar menú</button>
+                <div class="md-4 mb-4">
+                  <h2 class="md-3">Buscar Persona</h2>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="id" placeholder="Ingrese el ID">
+                    <button class="btn btn-success" id="btnGetId">Buscar</button>
+                  </div>
+                </div>
+              
+                <div id="result" class="d-flex flex-column gap-1">
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+      
+    
+    <script src="../api/Person.js"></script>
+    <script src="../components/nav.js"></script>
+</body>
+</html>
