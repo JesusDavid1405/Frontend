@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="menu" class="col-4">
+                <a href="../../index.html">Inicio</a>
+                <a href="./person.html">Person</a>
+                <a href="./User.html">User</a>
+                <a href="./Rol.html">Rol</a>
+                <a href="./RolUser.html">RolUser</a> 
+                <a href="./Form.html">Form</a>
+                <a href="./Permission.html">Permission</a>
+                <a href="./Module.html">Module</a>
+                <a href="./FormModule.html">FormModule</a>
+                <a href="./RolFormPermission.html">RolFormPermission</a>
+                <button id="botonCerrar" onclick="cerrarMenu()">❌</button>
+            </div>
+
+            <div class="col-12">
+                <button id="botonMostrar" class="botonMostrar" onclick="mostrarMenu()">Mostrar menú</button>
+                <div class="d-flex justify-content-end mb-3">
+                    <button id="btnCrear" class="boton">Agregar Registro</button>
+                </div>                
+                
+                <div class="md-4 mb-4">
+                  <h2 class="md-3">Buscar Persona</h2>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="id" placeholder="Ingrese el ID">
+                    <button class="btn btn-success" id="btnGetId">Buscar</button>
+                  </div>
+                </div>
+
+                <div class="list-head">
+                    <div class="row">
+                        <h5 class="col-md ms-2">#</h5>
+                        <strong class="col-md">Name</strong>
+                        <strong class="col-md">Description</strong>
+                        <strong class="col-md"> Editar</strong>
+                        <strong class="col-md"> Eliminar</strong>
+                    </div>
+                </div>
+              
+                <div id="result" class="d-flex flex-column gap-1">
+
+                </div>
+            </div>
+
+            <!--Modales-->
+
+            <div class="modal fade" id="ModalAlert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 id="modalHead"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="modal-content">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="ModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Agregar Rol</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="FirstName" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="Name" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="FirstName" class="form-label">Description</label>
+                                        <input type="text" class="form-control" id="Description" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnGuardar" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="ModalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Editar Rol</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input type="hidden" id="EditId">
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="Name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="EditName" aria-describedby="emailHelp">
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="Description" class="form-label">Description</label>
+                                        <input type="text" class="form-control" id="EditDescription" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btnGuardarCambios" class="btn btn-success">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin de Modales-->
+        </div>
+        
+    </div>
+    
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="../api/Module.js"></script>
+    <script src="../components/nav.js"></script>
+</body>
+</html>
