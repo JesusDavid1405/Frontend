@@ -23,7 +23,7 @@
 
 /* Botón para mostrar el menú */
 #botonMostrar {
-    width: 7vh;
+  width: 7vh;
   display: none;
   margin: 0px 0px 20px 0px;
   padding: 10px 15px;
@@ -51,6 +51,8 @@
 #botonMostrar:hover {
   background-color: #0b5734;
 }
+
+
 
 #botonCerrar {
   position: absolute;
