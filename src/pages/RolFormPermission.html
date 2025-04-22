@@ -33,7 +33,7 @@
                 </div>                
                 
                 <div class="md-4 mb-4">
-                  <h2 class="md-3">Buscar Module</h2>
+                  <h2 class="md-3">Buscar RolFormPermission</h2>
                   <div class="input-group">
                     <input type="text" class="form-control" id="id" placeholder="Ingrese el ID">
                     <button class="btn btn-success" id="btnGetId">Buscar</button>
@@ -43,10 +43,11 @@
                 <div class="list-head">
                     <div class="row">
                         <h5 class="col-md ms-2">#</h5>
-                        <strong class="col-md">Name</strong>
-                        <strong class="col-md">Description</strong>
-                        <strong class="col-md"> Editar</strong>
-                        <strong class="col-md"> Eliminar</strong>
+                        <strong class="col-md">Rol</strong>
+                        <strong class="col-md">Form</strong>
+                        <strong class="col-md">Permission</strong>
+                        <strong class="col-md">Editar</strong>
+                        <strong class="col-md">Eliminar</strong>
                     </div>
                 </div>
               
@@ -75,21 +76,33 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Agregar Rol</h5>
+                            <h5 class="modal-title">Agregar RolFormPermission</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <form>
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <label for="FirstName" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="Name" aria-describedby="emailHelp">
+                                        <label for="DocumentType" class="form-label">Rol</label>
+                                        <select id="Rol" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <label for="FirstName" class="form-label">Description</label>
-                                        <input type="text" class="form-control" id="Description" aria-describedby="emailHelp">
+                                        <label for="DocumentType" class="form-label">Form</label>
+                                        <select id="Form" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="DocumentType" class="form-label">Permission</label>
+                                        <select id="Permission" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
                                     </div>
                                 </div>
                             </form>
@@ -105,7 +118,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Editar Rol</h5>
+                            <h5 class="modal-title">Agregar Persona</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -113,15 +126,26 @@
                                 <input type="hidden" id="EditId">
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <label for="Name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="EditName" aria-describedby="emailHelp">
+                                        <label for="DocumentType" class="form-label">Rol</label>
+                                        <select id="EditRol" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
                                     </div>
-                                    
                                 </div>
                                 <div class="row">
                                     <div class="col mb-3">
-                                        <label for="Description" class="form-label">Description</label>
-                                        <input type="text" class="form-control" id="EditDescription" aria-describedby="emailHelp">
+                                        <label for="DocumentType" class="form-label">Form</label>
+                                        <select id="EditForm" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="DocumentType" class="form-label">Permission</label>
+                                        <select id="EditPermission" class="form-control" aria-label="Default select example">
+                                            
+                                        </select>
                                     </div>
                                 </div>
                             </form>
@@ -139,7 +163,7 @@
     
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="../api/Module.js"></script>
+    <script src="../api/RolFormPermission.js"></script>
     <script src="../components/nav.js"></script>
 </body>
 </html>
