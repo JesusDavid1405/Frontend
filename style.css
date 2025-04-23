@@ -1,0 +1,28 @@
+
+.Title{
+    font-size: 500%;
+    color: rgb(255, 255, 255);
+}
+.parrafo{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #157347;
+}
+.presentacion{
+    height: 100%;
+    width: 100%;
+    background-image: url('https://i.pinimg.com/1200x/d2/bf/c0/d2bfc0af828df9aa3fb9b3dee24e5ae0.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+body {
+    background-image: url('https://i.pinimg.com/1200x/d2/bf/c0/d2bfc0af828df9aa3fb9b3dee24e5ae0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+}
+
